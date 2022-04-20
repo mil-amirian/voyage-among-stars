@@ -1,1 +1,1 @@
-# voyageAmongStars
+# voyage-among-stars
