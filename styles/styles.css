@@ -96,7 +96,6 @@ a:hover {
 
 
 .start-btn {
-    font-family:Playfair Display;
     color: white;
     padding: 5px;
     width: auto;
@@ -110,10 +109,15 @@ a:hover {
 }
 
 .bgn-btn {
-    text-align: center;
     height: auto;
     font-size: 20px;
     padding: 0 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-family:Playfair Display;
+    align-items: center;
 }
 
 .start-btn:hover {
