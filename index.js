@@ -43,11 +43,7 @@ function getPlanets() {
                 planetList.push(solarSystemBodies[i].englishName)
             }
         }
-
-    console.log(planetList)
-
-    } else {
-        console.log('not ready')
+        console.log(planetList)
     }
 }
 
