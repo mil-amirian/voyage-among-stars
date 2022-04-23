@@ -69,7 +69,7 @@ function getPlanets() {
     if (solarSystemBodies.length > 0) {
         for (let i = 0; i < solarSystemBodies.length; i++) {
             if (solarSystemBodies[i].isPlanet) {
-                planetList.push(solarSystemBodies[i].englishName)
+                planetList.push(solarSystemBodies[i])
             }
         }
         console.log(planetList)
