@@ -51,14 +51,28 @@ a:hover {
     list-style: none;
 }
 
-.nav-item {
+#menu-icon {
+    color: white;
+    font-size: 1.75rem;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-item-container, .nav-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 5px;
     margin: 10px 10px;
     text-decoration: none;
     color: white;
 }
 
-.nav-bar {
+.nav-item:hover, #menu-icon:hover {
+    color: lime;
+}
+
+.nav-item {
     color: white;
 
 }
@@ -97,8 +111,8 @@ a:hover {
 
 .start-btn-container {
     color: white;
-    padding: 5px;
-    width: auto;
+    padding: 7px;
+    width: 10rem;
     height: auto;
     border: 2px solid white;
     border-radius: 5px;
@@ -109,9 +123,8 @@ a:hover {
 }
 
 .bgn-btn {
-    height: auto;
     font-size: 1.2rem;
-    padding: 0 50px;
+    width: inherit;
     background: none;
     border: none;
     cursor: pointer;
@@ -119,13 +132,20 @@ a:hover {
     font-family:Playfair Display;
 }
 
+.bgn-btn:hover {
+    color: black;
+}
+
+button:active {
+    top: 4px;
+}
 
 .start-btn-container:hover {
     cursor: pointer;
-    border: 2px solid rgb(115, 255, 0);
+    border: 2px solid lime;
     transform: scale(1.02);
     transition: 100ms ease-in-out;
-    background-color: rgb(115, 255, 0);
+    background-color: lime;
 }
 
 .welcome-title-black {
@@ -171,7 +191,7 @@ a:hover {
         list-style: none;
     }
     
-    .nav-item {
+    .nav-item-container {
         padding: 5px;
         margin: 0.2rem 0.2rem;
         text-decoration: none;
@@ -193,12 +213,21 @@ a:hover {
     .start-btn-container {
         width: 5rem;
     }
+
+    .nav-item-container {
+        display: none;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
 }
 
 @media only screen and (min-width: 1400px) {
 
 }
 
-.hide>* {
+.hide > * {
     display: none;
 }
