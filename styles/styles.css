@@ -95,7 +95,7 @@ a:hover {
 }
 
 
-.start-btn {
+.start-btn-container {
     color: white;
     padding: 5px;
     width: auto;
@@ -118,14 +118,15 @@ a:hover {
     color: white;
     font-family:Playfair Display;
     align-items: center;
+    vertical-align: center;
 }
 
-.start-btn:hover {
+.start-btn-container:hover {
     cursor: pointer;
     color: rgb(145, 255, 0);
     border: 2px solid rgb(145, 255, 0);
     transform: scale(1.05);
-    transition: 100ms ease-in-out;
+    transition: ease 100ms;
 }
 
 .welcome-title-black {
@@ -155,4 +156,8 @@ a:hover {
     background-color: #495057;
     border-top: 5px solid white;
     height: 30vh;
+}
+
+.hide>* {
+    display: none;
 }
