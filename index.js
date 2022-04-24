@@ -44,6 +44,7 @@ function startApp(e) {
     if (!solarSystemBodies.length) {
         getPlanetData()
     }
+    
 }
 
 function getPlanetData() {
