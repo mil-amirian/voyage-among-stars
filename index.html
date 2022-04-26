@@ -11,41 +11,74 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Square+Peg&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav id="top_head">
-        <div id="site-name">
-            <a href="#">
-                Voyage Among Stars
-            </a>
-        </div>
-
-        
-        <ul id="top_nav">
-            <li class="nav-icon" id="burger-menu">
-                <i class="fa-solid fa-bars" id="menu-icon"></i>
-            </li>
-            <li class="nav-item-container">
-                <a href="#" class="nav-item">
-                    <i class="fa-solid fa-earth-americas"></i>
-                    Home
+    <header>
+        <nav class="mobile-head hide">
+            <div class="mobile-name">
+                <a href="#">
+                    V.A.S
                 </a>
-            </li>
-            <li class="nav-item-container">
-                <a href="#space-travel" class="nav-item">
-                    <i class="fa-solid fa-rocket"></i>
-                    Space Travel
+            </div>
+            <ul class="mobile-nav">
+                <li class="mobile-nav-item-container">
+                    <a href="#" class="mobile-nav-item">
+                        <i class="fa-solid fa-earth-americas"></i>
+                        Home
+                    </a>
+                </li>
+                <li class="mobile-nav-item-container">
+                    <a href="#space-travel" class="mobile-nav-item">
+                        <i class="fa-solid fa-rocket"></i>
+                        Space Travel
+                    </a>
+                </li>
+                <li class="mobile-nav-item-container">
+                    <a href="#news" class="mobile-nav-item">
+                        <i class="fa-solid fa-newspaper"></i>
+                        News
+                    </a>
+                </li>
+            </ul>
+            <ul class="close-nav">
+                <li class="close-icon">
+                    <i class="fa-solid fa-xmark"></i>
+                </li>
+            </ul>
+        </nav>
+        <nav class="top-head">
+            <div class="site-name">
+                <a href="#">
+                    Voyage Among Stars
                 </a>
-            </li>
-            <li class="nav-item-container">
-                <a href="#news" class="nav-item">
-                    <i class="fa-solid fa-newspaper"></i>
-                    News
-                </a>
-            </li>
-            <!-- <li class="nav-item-container">
-                <a href="#" class="nav-item">Contact</a>
-            </li> -->
-        </ul>
-    </nav>
+            </div>
+            <ul class="top-nav">
+                <li class="burger-menu nav-icon">
+                    <i class="fa-solid fa-bars menu-icon"></i>
+                </li>
+                <li class="nav-item-container">
+                    <a href="#" class="nav-item">
+                        <i class="fa-solid fa-earth-americas"></i>
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item-container">
+                    <a href="#space-travel" class="nav-item">
+                        <i class="fa-solid fa-rocket"></i>
+                        Space Travel
+                    </a>
+                </li>
+                <li class="nav-item-container">
+                    <a href="#news" class="nav-item">
+                        <i class="fa-solid fa-newspaper"></i>
+                        News
+                    </a>
+                </li>
+                <!-- <li class="nav-item-container">
+                    <a href="#" class="nav-item">Contact</a>
+                </li> -->
+            </ul>
+        </nav>
+    </header>
+    
     <main>
         <div id="home-banner">
             <div class="welcome-container">
@@ -55,9 +88,9 @@
                 <div>
                     <h1 class="welcome-title">Welcome, adventurer.</h1>
                 </div>
-                <div class="start-btn-container">
-                    <button class="bgn-btn">Begin</button>
-                </div>
+                <button class="bgn-btn start-btn-container">
+                    Start
+                </button>
             </div>
         </div>
         <div id="space-travel">

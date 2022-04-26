@@ -1,6 +1,12 @@
 // SELECTORS
 const homeBanner = document.getElementById('home-banner')
 const beginButton = document.querySelector('.start-btn-container')
+const menuIcon = document.querySelector('.burger-menu')
+const mobileMenu = document.querySelector('.mobile-head')
+const siteHeader = document.querySelector('.top-head')
+const closeButton = document.querySelector('.close-icon')
+
+
 let solarSystemBodies = []
 let planetList = []
 
@@ -36,17 +42,25 @@ const vehicleList = [
 
 // EVENT LISTENERS
 
+//Start button
 beginButton.addEventListener('click', startApp)
+menuIcon.addEventListener('click', activateMobileMenu)
+closeButton.addEventListener('click', closeMobileMenu)
+
+
 
 // FUNCTIONS
+
+//App start
 function startApp(e) {
     e.preventDefault()
     if (!solarSystemBodies.length) {
         getPlanetData()
     }
-    
 }
 
+
+//To recieve all solar system data from API
 function getPlanetData() {
     $.ajax({
         url: "https://api.le-systeme-solaire.net/rest/bodies",
@@ -66,6 +80,7 @@ function getPlanetData() {
     })
 }
 
+//Cycle thru all solar system data from API to get only PLANETS data
 function getPlanets() {
     if (solarSystemBodies.length > 0) {
         for (let i = 0; i < solarSystemBodies.length; i++) {
@@ -75,6 +90,25 @@ function getPlanets() {
         }
         console.log(planetList)
     }
+}
+
+// To activate mobile menu
+
+function activateMobileMenu(e) {
+    e.preventDefault()
+    mobileMenu.classList.remove('hide')
+    menuIcon.classList.add('hide')
+    siteHeader.classList.add('hide')
+    console.log(mobileMenu)
+}
+
+//To close Mobile Menu
+
+function closeMobileMenu(e) {
+    e.preventDefault()
+    mobileMenu.classList.add('hide')
+    menuIcon.classList.remove('hide')
+    siteHeader.classList.remove('hide')
 }
 
 // EXECUTE FUNCTIONS

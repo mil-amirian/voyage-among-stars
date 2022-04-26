@@ -1,6 +1,11 @@
 /* font-family: 'Playfair Display', serif;
 font-family: 'Square Peg', cursive; */
 
+:root {
+    --title-font:'Square Peg', sans-serif;
+    --content-font: 'Playfair Display', sans-serif;
+}
+
 *   {
     margin: 0;
     padding: 0;
@@ -24,7 +29,7 @@ a:hover {
     text-shadow: 5px;
 }
 
-#top_head {
+.top-head, .mobile-head {
     position: fixed;
     align-items: center;
     width: 100%;
@@ -34,11 +39,17 @@ a:hover {
     background-color: rgba(41, 41, 41, 0.194);
 }
 
-#site-name {
+.mobile-head {
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgba(41, 41, 41, 0.725);
+}
+
+.site-name, .mobile-name {
     height: 10vh;
     display: flex;
     align-items: center;
-    font-family: 'Square Peg';
+    font-family: var(--title-font);
     color: #000;
     font-size: 3rem;
     width: fit-content;
@@ -46,8 +57,15 @@ a:hover {
     flex-wrap: wrap;
 }
 
-#top_nav {
-    font-family: Playfair Display;
+.mobile-name {
+    font-size: 2rem;
+    height: 3rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.top-nav, .mobile-nav {
+    font-family: var(--content-font);
     display: flex;
     justify-content: center; 
     padding: 0;
@@ -55,14 +73,21 @@ a:hover {
     list-style: none;
 }
 
-#menu-icon {
+.mobile-nav {
+    margin-top: 2rem;
+    flex-direction: column;
+    margin-right: 0px;
+}
+
+.menu-icon {
     color: white;
     font-size: 1.75rem;
     cursor: pointer;
     display: none;
 }
 
-.nav-item-container, .nav-icon {
+.nav-item-container, .nav-icon, .close-icon, .mobile-nav,
+.mobile-nav-item-container, .mobile-nav-item, .mobile-nav-item-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,9 +97,17 @@ a:hover {
     color: white;
 }
 
-.nav-item:hover, #menu-icon:hover {
-    color: lime;
+.mobile-nav-item {
+    margin: 0;
+}
+
+.nav-item:hover, .menu-icon:hover, .close-icon:hover, .mobile-nav-item:hover {
+    color: rgb(0, 187, 0);
     cursor: pointer;
+}
+
+.close-icon {
+    font-size: 3rem
 }
 
 .nav-item {
@@ -107,7 +140,7 @@ a:hover {
 }
 
 .welcome-title {
-    font-family:Playfair Display;
+    font-family: var(--content-font);
     color: white;
     font-size: 3rem;
     padding: 2vw;
@@ -116,10 +149,7 @@ a:hover {
 
 .start-btn-container {
     color: white;
-    padding: 7px;
     width: 10rem;
-    height: auto;
-    border: 2px solid white;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -128,18 +158,36 @@ a:hover {
 }
 
 .bgn-btn {
-    font-size: 1.2rem;
-    width: inherit;
+    font-size: 2rem;
+    line-height: 1.5;
+    height: 50px;
+    width: 10rem;
     background: none;
-    border: none;
+    border: 1px solid white;
     cursor: pointer;
     color: white;
-    font-family:Playfair Display;
+    font-family: var(--title-font);
+    color: white;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.bgn-btn:hover {
+.bgn-btn:hover, 
+.bgn-btn:focus {
     color: black;
+    box-shadow: 0em 0.5em 0.5em -0.4em rgba(0, 0, 0, 0.551);
+    transform: translateY(-0.25em);
 }
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 lime}
+}
+
+/* .bgn-btn:hover, .bgn-btn:focus {
+    color: black;
+} */
 
 button:active {
     top: 4px;
@@ -154,7 +202,7 @@ button:active {
 }
 
 .welcome-title-black {
-    font-family:Playfair Display;
+    font-family: var(--content-font);
     color: black;
     font-size: 3rem;
     padding: 5vw;
@@ -182,15 +230,19 @@ button:active {
     height: 30vh;
 }
 
+.burger-menu {
+    display: none;
+}
+
 @media only screen and (max-width: 900px) {
     .welcome-title-black, .welcome-title {
         font-size: 2.5rem;
     }
-    #site-name {
+    .site-name {
         font-size: 2rem;
         margin-left: 1rem;
     }
-    #top_nav {
+    .top_nav {
         padding: 0;
         margin-right: 1rem;
         list-style: none;
@@ -211,7 +263,7 @@ button:active {
         font-size: 1.5rem;
     }
 
-    #site-name {
+    .site-name {
         font-size: 1.5rem;
     }
 
@@ -223,8 +275,12 @@ button:active {
         display: none;
     }
 
-    #menu-icon {
+    .menu-icon, .burger-menu {
         display: block;
+    }
+
+    .top-nav {
+        margin-right: 1rem;
     }
 
 }
@@ -233,6 +289,6 @@ button:active {
 
 }
 
-.hide > * {
+.hide, .hide > * {
     display: none;
 }
