@@ -124,7 +124,7 @@ a:hover {
     background-size: cover;
 }
 
-.welcome-container {
+.welcome-container, .planets-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -139,22 +139,24 @@ a:hover {
     justify-content: center;
 }
 
+.planets-bkg {
+    background-color: #f8f8f8e8;
+    height: 85vh;
+    width: 98vw;
+    margin-top: 4rem;
+    border-radius: 10px;
+}
+
+.ind-planet {
+
+}
+
 .welcome-title {
     font-family: var(--content-font);
     color: white;
     font-size: 3rem;
     padding: 2vw;
 }
-
-
-/* .start-btn-container {
-    color: white;
-    width: 10rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-} */
 
 .bgn-btn {
     font-size: 2rem;
@@ -184,11 +186,6 @@ a:hover {
 @keyframes pulse {
     0% { box-shadow: 0 0 0 0 lime}
 }
-
-/* .bgn-btn:hover, .bgn-btn:focus {
-    color: black;
-} */
-
 
 .bgn-btn:hover {
     cursor: pointer;
