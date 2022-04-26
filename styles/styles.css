@@ -147,15 +147,14 @@ a:hover {
 }
 
 
-.start-btn-container {
+/* .start-btn-container {
     color: white;
     width: 10rem;
-    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
+} */
 
 .bgn-btn {
     font-size: 2rem;
@@ -172,13 +171,14 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
 }
 
-.bgn-btn:hover, 
-.bgn-btn:focus {
+.bgn-btn:hover {
     color: black;
     box-shadow: 0em 0.5em 0.5em -0.4em rgba(0, 0, 0, 0.551);
-    transform: translateY(-0.25em);
+    transform: translateY(0.05em);
+    transition: ease-in-out 100ms;
 }
 
 @keyframes pulse {
@@ -189,15 +189,10 @@ a:hover {
     color: black;
 } */
 
-button:active {
-    top: 4px;
-}
 
-.start-btn-container:hover {
+.bgn-btn:hover {
     cursor: pointer;
     border: 2px solid lime;
-    transform: scale(1.02);
-    transition: 100ms ease-in-out;
     background-color: lime;
 }
 
