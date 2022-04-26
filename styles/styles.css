@@ -142,13 +142,28 @@ a:hover {
 .planets-bkg {
     background-color: #f8f8f8e8;
     height: 85vh;
-    width: 98vw;
+    width: 100vw;
     margin-top: 4rem;
+}
+
+.planet-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ind-planet-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid red;
     border-radius: 10px;
 }
 
 .ind-planet {
-
+    height: 10vh;
+    padding: 1rem 1rem;
 }
 
 .welcome-title {
