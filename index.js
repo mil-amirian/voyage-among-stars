@@ -68,6 +68,10 @@ function startApp(e) {
 
 //To recieve all solar system data from API
 function getPlanetDataFromApi() {
+    
+    welcomeContainer.classList.add('hide')
+    planetsContainer.classList.remove('hide')
+
     $.ajax({
         url: "https://api.le-systeme-solaire.net/rest/bodies",
         method: "get",
@@ -88,8 +92,6 @@ function getPlanetDataFromApi() {
 
 //Cycle thru all solar system data from API to get only PLANETS data
 function getPlanets() {
-    welcomeContainer.classList.add('hide')
-    planetsContainer.classList.remove('hide')
     if (solarSystemBodies.length > 0) {
         for (let i = 0; i < solarSystemBodies.length; i++) {
             if (solarSystemBodies[i].isPlanet) {
