@@ -22,10 +22,10 @@ body {
 
 a {
     text-decoration: none;
-    color: rgb(239, 239, 239);
+    color: rgb(81, 81, 81);
 }
 a:hover {
-    color: rgb(255, 255, 255);
+    color: rgb(136, 136, 136);
     text-shadow: 5px;
 }
 
@@ -36,22 +36,23 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgba(41, 41, 41, 0.194);
+    background-color: rgb(238, 238, 238);
+    box-shadow: 0em 0.1em 0.5em 0.1em rgb(188, 188, 188);
 }
 
 .mobile-head {
     justify-content: space-between;
     align-items: flex-start;
-    background-color: rgba(41, 41, 41, 0.725);
+    background-color: rgba(41, 41, 41, 0.836);
 }
 
 .site-name, .mobile-name {
-    height: 10vh;
+    height: 5vh;
     display: flex;
     align-items: center;
     font-family: var(--title-font);
-    color: #000;
-    font-size: 3rem;
+    color: rgb(0, 0, 0);
+    font-size: 1.8rem;
     width: fit-content;
     padding: 0vw 1vw;
     flex-wrap: wrap;
@@ -80,7 +81,7 @@ a:hover {
 }
 
 .menu-icon {
-    color: white;
+    color: rgb(89, 89, 89);
     font-size: 1.75rem;
     cursor: pointer;
     display: none;
@@ -97,22 +98,37 @@ a:hover {
     color: white;
 }
 
+.nav-item {
+    color: rgb(124, 124, 124);
+    width: 50px;
+    display: flex;
+    justify-content: center;
+}
+
 .mobile-nav-item {
     margin: 0;
 }
 
 .nav-item:hover, .menu-icon:hover, .close-icon:hover, .mobile-nav-item:hover {
-    color: rgb(0, 187, 0);
+    color: rgb(27, 27, 27);
     cursor: pointer;
 }
 
-.close-icon {
-    font-size: 3rem
+.earth-icon:hover {
+    color: rgb(7, 209, 0);
 }
 
-.nav-item {
-    color: white;
+.rocket-icon:hover{
+    color: rgb(255, 0, 81);
+    text-shadow:#2D3142;
+    ;
+}
 
+.news-icon:hover {
+    color: rgb(0, 89, 255);
+}
+.close-icon {
+    font-size: 3rem
 }
 
 #home-banner {
@@ -140,10 +156,10 @@ a:hover {
 }
 
 .planets-bkg {
-    background-color: #f8f8f8e8;
-    height: 85vh;
+    background-color: #e0e0e0;
+    height: 100vh;
     width: 100vw;
-    margin-top: 4rem;
+    padding-top: 2rem;
 }
 
 .planet-img-container {

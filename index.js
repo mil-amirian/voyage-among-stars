@@ -88,6 +88,8 @@ function getPlanetDataFromApi() {
 
 //Cycle thru all solar system data from API to get only PLANETS data
 function getPlanets() {
+    welcomeContainer.classList.add('hide')
+    planetsContainer.classList.remove('hide')
     if (solarSystemBodies.length > 0) {
         for (let i = 0; i < solarSystemBodies.length; i++) {
             if (solarSystemBodies[i].isPlanet) {
@@ -96,8 +98,6 @@ function getPlanets() {
         }
     }
     console.log(planetList)
-    welcomeContainer.classList.add('hide')
-    planetsContainer.classList.remove('hide')
 }
 
 // To activate mobile menu
