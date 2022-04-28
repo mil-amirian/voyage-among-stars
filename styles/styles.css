@@ -147,23 +147,40 @@ a:hover {
 }
 
 .planet-img-container {
+    width: auto;
+    height: 20vh;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin: 1em;
 }
 
 .ind-planet-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex-direction: column;
-    border: 1px solid red;
-    border-radius: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    width: 100px;
+    height: 15vh;
+    cursor: pointer;
+    padding-bottom: 1rem;
+}
+
+.ind-planet-container:hover {
+    box-shadow: 0em 1em 1em 0.1em rgb(188, 188, 188);
 }
 
 .ind-planet {
-    height: 10vh;
-    padding: 1rem 1rem;
+    height: auto;
+    width: 100px;
+    padding: 0.5rem;
+}
+
+.planet-name {
+    font-family: var(--content-font);
 }
 
 .welcome-title {

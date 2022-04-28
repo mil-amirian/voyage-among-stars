@@ -5,6 +5,8 @@ const menuIcon = document.querySelector('.burger-menu')
 const mobileMenu = document.querySelector('.mobile-head')
 const siteHeader = document.querySelector('.top-head')
 const closeButton = document.querySelector('.close-icon')
+const welcomeContainer = document.querySelector('.welcome-container')
+const planetsContainer = document.querySelector('.planets-container')
 
 
 let solarSystemBodies = []
@@ -94,6 +96,8 @@ function getPlanets() {
         }
     }
     console.log(planetList)
+    welcomeContainer.classList.add('hide')
+    planetsContainer.classList.remove('hide')
 }
 
 // To activate mobile menu
