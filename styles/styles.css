@@ -147,9 +147,12 @@ a:hover {
 }
 
 .planet-img-container {
+    width: auto;
+    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 1em;
 }
 
 .ind-planet-container {
@@ -157,13 +160,15 @@ a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 1px solid red;
+    box-shadow: 0em 0.1em 1em 0.1em rgb(255, 255, 255);
     border-radius: 10px;
+    margin: 5px;
+    border: 1px solid rgb(185, 185, 185);
 }
 
 .ind-planet {
-    height: 10vh;
-    padding: 1rem 1rem;
+    height: calc(90vw/8);
+    padding: 0.5rem;
 }
 
 .welcome-title {
