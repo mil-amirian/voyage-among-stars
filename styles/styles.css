@@ -2,8 +2,8 @@
 font-family: 'Square Peg', cursive; */
 
 :root {
-    --title-font:'Square Peg', sans-serif;
-    --content-font: 'Playfair Display', sans-serif;
+    --title-font:'Major Mono Display', monospace;
+    --content-font: 'Playfair Display', serif;
 }
 
 *   {
@@ -22,10 +22,10 @@ body {
 
 a {
     text-decoration: none;
-    color: rgb(81, 81, 81);
+    color: rgb(163, 163, 163);
 }
 a:hover {
-    color: rgb(136, 136, 136);
+    color: rgb(213, 213, 213);
     text-shadow: 5px;
 }
 
@@ -40,6 +40,17 @@ a:hover {
     box-shadow: 0em 0.1em 0.5em 0.1em rgb(205, 205, 205);
 }
 
+.top-head-splash {
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(44, 44, 44);
+    box-shadow: 0em 0.1em 0.1em 0.1em rgb(35, 35, 35);
+}
+
 .mobile-head {
     justify-content: space-between;
     align-items: flex-start;
@@ -52,7 +63,7 @@ a:hover {
     align-items: center;
     font-family: var(--title-font);
     color: rgb(0, 0, 0);
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     width: fit-content;
     padding: 0vw 1vw;
     flex-wrap: wrap;
@@ -99,7 +110,7 @@ a:hover {
 }
 
 .nav-item {
-    color: rgb(124, 124, 124);
+    color: rgb(184, 184, 184);
     width: 50px;
     display: flex;
     justify-content: center;
@@ -156,7 +167,7 @@ a:hover {
 }
 
 .planets-bkg {
-    background-color: #e0e0e0;
+    background-color: #3c3c3d;
     height: 100vh;
     width: 100vw;
     padding-top: 2rem;
@@ -178,7 +189,7 @@ a:hover {
     align-items: center;
     flex-direction: column;
     border-radius: 5px;
-    margin: 5px;
+    margin: 1rem;
     width: 100px;
     height: 15vh;
     cursor: pointer;
@@ -186,7 +197,11 @@ a:hover {
 }
 
 .ind-planet-container:hover {
-    box-shadow: 0em 1em 1em 0.1em rgb(188, 188, 188);
+    box-shadow: 0em 1em 1em 0.1em rgb(42, 42, 42);
+}
+
+.ind-planet-container:active{
+    box-shadow: 0em 0.1em 0.1em 0.1em rgb(138, 138, 138);
 }
 
 .ind-planet {
@@ -197,6 +212,7 @@ a:hover {
 
 .planet-name {
     font-family: var(--content-font);
+    color: rgb(219, 219, 219);
 }
 
 .welcome-title {
@@ -207,7 +223,7 @@ a:hover {
 }
 
 .bgn-btn {
-    font-size: 2rem;
+    font-size: 1rem;
     line-height: 1.5;
     height: 50px;
     width: 10rem;
@@ -222,6 +238,8 @@ a:hover {
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    display: inline-flex;
+
 }
 
 .bgn-btn:hover {
@@ -279,7 +297,7 @@ a:hover {
         font-size: 2.5rem;
     }
     .site-name {
-        font-size: 2rem;
+        font-size: 1.1rem;
         margin-left: 1rem;
     }
     .top_nav {
@@ -304,7 +322,7 @@ a:hover {
     }
 
     .site-name {
-        font-size: 1.5rem;
+        font-size: 0.9rem;
     }
 
     .start-btn-container {
@@ -321,6 +339,40 @@ a:hover {
 
     .top-nav {
         margin-right: 1rem;
+    }
+
+    .mobile-head {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        box-shadow: 0em 0.1em 0.1em 0.1em rgb(35, 35, 35);
+    }
+
+    .mobile-nav {
+        font-size: 0.8rem;
+        font-family: var(--title-font);
+    }
+
+    .mobile-nav-item-container {
+        padding: 0;
+    }
+
+    .mobile-nav-item:hover {
+        color: inherit;
+    }
+
+    i {
+        padding-right: 5px;
+    }
+
+    .mobile-name {
+        font-size: 1rem;
+        margin-top: 3px;
+        margin-left: 10px;
+        color: goldenrod !important;
+    }
+
+    .close-icon {
+        font-size: 2rem;
     }
 
 }
