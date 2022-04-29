@@ -181,6 +181,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     margin: 1em;
+    margin-top: 1.5rem;
 }
 
 .ind-planet-container {
@@ -197,11 +198,11 @@ a:hover {
 }
 
 .ind-planet-container:hover {
-    box-shadow: 0em 1em 1em 0.1em rgb(42, 42, 42);
+    box-shadow: 0em 1em 0.8em 0.1em rgb(42, 42, 42);
 }
 
 .ind-planet-container:active{
-    box-shadow: 0em 0.1em 0.1em 0.1em rgb(138, 138, 138);
+    box-shadow: 0em 0.1em 0.1em 0.1em rgb(42, 42, 42);
 }
 
 .ind-planet {
