@@ -216,6 +216,10 @@ a:hover {
     color: rgb(219, 219, 219);
 }
 
+.planet-info-container {
+    height: 70vh;
+}
+
 .welcome-title {
     font-family: var(--content-font);
     color: white;
@@ -291,6 +295,25 @@ a:hover {
 
 .burger-menu {
     display: none;
+}
+
+@media only screen and (max-width: 1090px) {
+    .ind-planet-container {
+        border-radius: 5px;
+        margin: 0.5rem;
+        width: 75px;
+        height: 10vh;
+    }
+
+    .ind-planet {
+        height: auto;
+        width: 75px;
+        padding: 0.2rem;
+    }
+
+    .planet-name {
+        font-size: 0.8rem;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -374,6 +397,25 @@ a:hover {
 
     .close-icon {
         font-size: 2rem;
+    }
+
+    .ind-planet-container {
+        border-radius: 5px;
+        margin: 0.5rem;
+        width: 75px;
+        height: 10vh;
+        cursor: pointer;
+        padding-bottom: 1rem;
+    }
+
+    .ind-planet {
+        height: auto;
+        width: 50px;
+        padding: 0.2rem;
+    }
+
+    .planet-name {
+        font-size: 0.8rem;
     }
 
 }
