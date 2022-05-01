@@ -7,6 +7,22 @@ const siteHeader = document.querySelector('.top-head-splash')
 const closeButton = document.querySelector('.close-icon')
 const welcomeContainer = document.querySelector('.welcome-container')
 const planetsContainer = document.querySelector('.planets-container')
+const planets = document.querySelectorAll('.ind-planet-container')
+const planetName = document.querySelector('.planet-name-info')
+const planetImage = document.querySelector('.planet-img')
+
+let selectingEachPlanet = function () {
+    for (let i = 0; i < 8; i++) {
+        // console.log(planets[i].firstElementChild.classList)
+        let getPlanetName = planets[i].innerText
+        planets[i].addEventListener('click', () => {
+            planetName.textContent = `Name: ${getPlanetName}`
+            planetImage.src = `images/planet-images/${getPlanetName}.png`
+        })
+    }
+}
+
+selectingEachPlanet()
 
 // ARRAY DECLARATIONS
 let solarSystemBodies = []
@@ -14,21 +30,20 @@ let planetList = []
 
 
 // SOUNDS ASSIGNMENTS
-const selectSound = new Audio("sounds/human-click.mp3")
-
+const startSound = new Audio("sounds/human-click.mp3")
+const selectSound = new Audio("sounds/select2.mp3")
 
 // EVENT LISTENERS
 
 //Start button
-// beginButton.addEventListener("mouseover", hoverSound) 
 
+// navButtons.addEventListener("mouseover", hoverSound) 
 // function hoverSound() {
 //     selectSound.loop = false
 //     selectSound.play()
 // }
 
 beginButton.addEventListener('click', startApp)
-
 
 menuIcon.addEventListener('click', activateMobileMenu)
 closeButton.addEventListener('click', closeMobileMenu)
@@ -45,12 +60,13 @@ function startApp(e) {
     } else {
         console.log(planetList)
     }
+    selectingEachPlanet()
 }
 
 
 //To recieve all solar system data from API
 function getPlanetDataFromApi() {
-    selectSound.play()
+    startSound.play()
 
     welcomeContainer.classList.add('hide')
     planetsContainer.classList.remove('hide')

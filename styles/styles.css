@@ -180,8 +180,8 @@ a:hover {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 1em;
-    margin-top: 1.5rem;
+    padding: 1em;
+    /* padding-top: 1.5rem; */
 }
 
 .ind-planet-container {
@@ -198,7 +198,7 @@ a:hover {
 }
 
 .ind-planet-container:hover {
-    box-shadow: 0em 1em 0.8em 0.1em rgb(42, 42, 42);
+    box-shadow: 0em 1em 0.8em 0.1em rgba(17, 17, 17, 0.421);
 }
 
 .ind-planet-container:active{
@@ -211,13 +211,29 @@ a:hover {
     padding: 0.5rem;
 }
 
-.planet-name {
+.planet-name, .planet-name-info {
     font-family: var(--content-font);
     color: rgb(219, 219, 219);
 }
 
 .planet-info-container {
-    height: 70vh;
+    height: 76vh;
+    background-color:#282828;
+    border-top: 2px rgb(66, 66, 66) solid;
+    box-shadow: 0em -0.1em 0.1em 0.1em rgb(35, 35, 35);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.planet-img-info-panel {
+    text-align: center;
+    /* width: 80%; */
+}
+
+.planet-img {
+    width: 70%;
 }
 
 .welcome-title {
@@ -302,7 +318,6 @@ a:hover {
         border-radius: 5px;
         margin: 0.5rem;
         width: 75px;
-        height: 10vh;
     }
 
     .ind-planet {
@@ -337,6 +352,7 @@ a:hover {
         color: white;
         font-size: 0.9rem;
     }
+
 }
 
 @media only screen and (max-width: 770px) {
@@ -400,7 +416,8 @@ a:hover {
     }
 
     .planet-img-container {
-        height: 25vh;
+        align-content: stretch;
+        height: 20vh;
     }
 
     .planet-info-container {
@@ -411,7 +428,7 @@ a:hover {
         border-radius: 5px;
         margin: 0.5rem;
         width: 50px;
-        height: 10vh;
+        height: 15vh;
         cursor: pointer;
         padding-bottom: 1rem;
     }
@@ -428,8 +445,25 @@ a:hover {
 
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (max-width: 565px) {
+    .planet-img-container {
+        height: 400px;
+    }
+}
 
+
+@media only screen and (max-width: 380px) {
+    .planet-img-container {
+        height: 30vh;
+    }
+
+    .ind-planet {
+        display: none;
+    }
+
+    .ind-planet-container {
+        height: 5vh;
+    }
 }
 
 .hide, .hide > * {
