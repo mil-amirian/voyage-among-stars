@@ -1,6 +1,12 @@
 /* font-family: 'Playfair Display', serif;
 font-family: 'Square Peg', cursive; */
 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
 :root {
     --title-font:'Major Mono Display', monospace;
     --content-font: 'Playfair Display', serif;
@@ -17,7 +23,8 @@ html {
 }
 
 body {
-    background-color: #2D3142
+    background-color: #2D3142;
+    overflow-x: hidden;
 }
 
 a {
@@ -45,7 +52,6 @@ a:hover {
     align-items: center;
     width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     background-color: rgb(44, 44, 44);
     box-shadow: 0em 0.1em 0.1em 0.1em rgb(35, 35, 35);
@@ -83,6 +89,7 @@ a:hover {
     padding: 0;
     margin-right: 50px;
     list-style: none;
+    
 }
 
 .mobile-nav {
@@ -96,6 +103,10 @@ a:hover {
     font-size: 1.75rem;
     cursor: pointer;
     display: none;
+}
+
+ul {
+    margin: 0;
 }
 
 .nav-item-container, .nav-icon, .close-icon, .mobile-nav,
@@ -181,7 +192,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     padding: 1em;
-    /* padding-top: 1.5rem; */
+    margin-top: 1.5rem;
 }
 
 .ind-planet-container {
@@ -223,6 +234,7 @@ a:hover {
     box-shadow: 0em -0.1em 0.1em 0.1em rgb(35, 35, 35);
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-right: 1rem;
     justify-content: center;
     align-items: center;
 }
