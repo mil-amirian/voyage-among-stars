@@ -222,7 +222,7 @@ ul {
     padding: 0.5rem;
 }
 
-.planet-name, .planet-name-info {
+.planet-name, .planet-name-info, .planet-info {
     font-family: var(--content-font);
     color: rgb(219, 219, 219);
 }

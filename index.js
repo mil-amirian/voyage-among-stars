@@ -8,21 +8,46 @@ const closeButton = document.querySelector('.close-icon')
 const welcomeContainer = document.querySelector('.welcome-container')
 const planetsContainer = document.querySelector('.planets-container')
 const planets = document.querySelectorAll('.ind-planet-container')
+const planetInfo = document.querySelector('.planet-info')
 const planetName = document.querySelector('.planet-name-info')
 const planetImage = document.querySelector('.planet-img')
 
+
+
 let selectingEachPlanet = function () {
-    for (let i = 0; i < 8; i++) {
-        // console.log(planets[i].firstElementChild.classList)
-        let getPlanetName = planets[i].innerText
+    let getPlanetName
+    let planetNameLine
+    let discoveredBy
+    let previousDiscoveredBy
+
+    let discoveredDate
+    let numberOfMoons
+    let gravity
+    let meanRadius
+
+
+    for (let i = 0; i < planets.length; i++) {
         planets[i].addEventListener('click', () => {
-            planetName.textContent = `Name: ${getPlanetName}`
+            getPlanetName = planets[i].innerText
+
             planetImage.src = `images/planet-images/${getPlanetName}.png`
+            planetName.textContent = `Name: ${getPlanetName}`
+            
+            //Discovered By
+
+            discoveredBy = document.createElement('div')
+            discoveredBy.classList.add("discovered-by")
+            discoveredBy.textContent = `Discovered by ${planetList[0].discoveredBy}`
+            planetInfo.appendChild(discoveredBy)
+
+
+            
+
         })
     }
 }
-
 selectingEachPlanet()
+
 
 // ARRAY DECLARATIONS
 let solarSystemBodies = []
@@ -60,7 +85,6 @@ function startApp(e) {
     } else {
         console.log(planetList)
     }
-    selectingEachPlanet()
 }
 
 
@@ -82,6 +106,7 @@ function getPlanetDataFromApi() {
             if (!planetList.length) {
                 getPlanets()
             }
+            
         },
         error: function (error) {
             console.error(error)
