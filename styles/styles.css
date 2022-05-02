@@ -186,7 +186,7 @@ ul {
 
 .planet-img-container {
     width: auto;
-    height: 20vh;
+    height: 25vh;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -202,8 +202,8 @@ ul {
     flex-direction: column;
     border-radius: 5px;
     margin: 1rem;
-    width: 100px;
-    height: 15vh;
+    width: 120px;
+    height: 20vh;
     cursor: pointer;
     padding-bottom: 1rem;
 }

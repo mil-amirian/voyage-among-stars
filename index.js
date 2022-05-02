@@ -18,8 +18,6 @@ let selectingEachPlanet = function () {
     let getPlanetName
     let planetNameLine
     let discoveredBy
-    let previousDiscoveredBy
-
     let discoveredDate
     let numberOfMoons
     let gravity
@@ -34,19 +32,22 @@ let selectingEachPlanet = function () {
             planetName.textContent = `Name: ${getPlanetName}`
             
             //Discovered By
+            if (numberOfMoons) {
+                numberOfMoons.remove()
+            }
 
-            discoveredBy = document.createElement('div')
-            discoveredBy.classList.add("discovered-by")
-            discoveredBy.textContent = `Discovered by ${planetList[0].discoveredBy}`
-            planetInfo.appendChild(discoveredBy)
-
+            numberOfMoons = document.createElement('div')
+            numberOfMoons.classList.add("number-of-moons")
+            numberOfMoons.textContent = `Number of Moons: ${planetList[6].moons.length}`
+            planetInfo.appendChild(numberOfMoons)
+    
+            
 
             
 
         })
     }
 }
-selectingEachPlanet()
 
 
 // ARRAY DECLARATIONS
@@ -85,6 +86,7 @@ function startApp(e) {
     } else {
         console.log(planetList)
     }
+
 }
 
 
@@ -106,7 +108,7 @@ function getPlanetDataFromApi() {
             if (!planetList.length) {
                 getPlanets()
             }
-            
+            selectingEachPlanet()
         },
         error: function (error) {
             console.error(error)
