@@ -8,9 +8,9 @@ const closeButton = document.querySelector('.close-icon')
 const welcomeContainer = document.querySelector('.welcome-container')
 const planetsContainer = document.querySelector('.planets-container')
 const planets = document.querySelectorAll('.ind-planet-container')
-const planetInfo = document.querySelector('.planet-info')
-const planetName = document.querySelector('.planet-name-info')
-const planetImage = document.querySelector('.planet-img')
+const planetInfoSection = document.querySelector('.planet-info')
+const planetImgSection = document.querySelector('.planet-img-info-panel')
+
 
 
 
@@ -22,25 +22,61 @@ let selectingEachPlanet = function () {
     let numberOfMoons
     let gravity
     let meanRadius
-
+    let planetName
+    let planetImage
+    let selectedPlanetName
 
     for (let i = 0; i < planets.length; i++) {
         planets[i].addEventListener('click', () => {
-            getPlanetName = planets[i].innerText
-
-            planetImage.src = `images/planet-images/${getPlanetName}.png`
-            planetName.textContent = `Name: ${getPlanetName}`
             
-            //Discovered By
+            // Planet Name
+            if (planetName) {
+                planetName.remove()
+            }
+            
+            getPlanetName = planets[i].innerText
+            
+            planetName = document.createElement('div')
+            planetName.classList.add('planet-name-info')
+            planetName.textContent = `Name: ${getPlanetName}`
+            planetInfoSection.appendChild(planetName)
+
+
+            // Render planet image
+            if (planetImage) {
+                planetImage.remove()
+            }
+
+            planetImage = document.createElement('img')
+            planetImage.classList.add('planet-img')
+            planetImage.src = `images/planet-images/${getPlanetName}.png`
+            // planetName.textContent = `Name: ${getPlanetName}`
+            planetImgSection.appendChild(planetImage)
+            
+            selectedPlanetName = planets[i].lastElementChild.textContent
+
+            //Number of Moons
             if (numberOfMoons) {
                 numberOfMoons.remove()
             }
 
             numberOfMoons = document.createElement('div')
             numberOfMoons.classList.add("number-of-moons")
-            numberOfMoons.textContent = `Number of Moons: ${planetList[6].moons.length}`
-            planetInfo.appendChild(numberOfMoons)
-    
+            let planetsMoons = {}
+            for (let i = 0; i < planetList.length; i++) {
+                if (planetList[i].moons) {
+                    planetsMoons.PlanetName = planetList[i].englishName
+                    planetsMoons.Moons = planetList[i].moons
+                    console.log(planetList[i].moons).length
+                } else {
+                    planetsMoons = 0
+                }
+
+            }
+           
+            numberOfMoons.textContent = `Number of Moons: ${planetsMoons}`
+            planetInfoSection.appendChild(numberOfMoons)
+            
             
 
             
@@ -109,6 +145,12 @@ function getPlanetDataFromApi() {
                 getPlanets()
             }
             selectingEachPlanet()
+
+            // Remove 'loading' node/div
+            let loadingTitle = document.querySelector('.loading-title-container')
+            if (loadingTitle) {
+                loadingTitle.remove()
+            }
         },
         error: function (error) {
             console.error(error)

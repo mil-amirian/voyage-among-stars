@@ -192,7 +192,7 @@ ul {
     align-items: center;
     justify-content: center;
     padding: 1em;
-    margin-top: 1.5rem;
+    /* margin-top: 1.5rem; */
 }
 
 .ind-planet-container {
@@ -248,7 +248,12 @@ ul {
     width: 70%;
 }
 
-.welcome-title {
+.loading-title-container {
+    width: 100%;
+    text-align: center;
+}
+
+.welcome-title, .loading-title {
     font-family: var(--content-font);
     color: white;
     font-size: 3rem;
@@ -325,7 +330,7 @@ ul {
     display: none;
 }
 
-@media only screen and (max-width: 1090px) {
+@media only screen and (max-width: 1250px) {
     .ind-planet-container {
         border-radius: 5px;
         margin: 0.5rem;
