@@ -11,9 +11,6 @@ const planets = document.querySelectorAll('.ind-planet-container')
 const planetInfoSection = document.querySelector('.planet-info')
 const planetImgSection = document.querySelector('.planet-img-info-panel')
 
-
-
-
 let selectingEachPlanet = function () {
     let getPlanetName
     let planetNameLine
@@ -71,9 +68,7 @@ let selectingEachPlanet = function () {
                 } else {
                     planetsMoons = 0
                 }
-
             }
-           
             numberOfMoons.textContent = `Number of Moons: ${planetsMoons}`
             planetInfoSection.appendChild(numberOfMoons)
             
