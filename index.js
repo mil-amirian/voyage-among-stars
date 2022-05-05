@@ -38,7 +38,6 @@ let selectingEachPlanet = function () {
             planetName.textContent = `Name: ${getPlanetName}`
             planetInfoSection.appendChild(planetName)
 
-
             // Render planet image
             if (planetImage) {
                 planetImage.remove()
@@ -52,7 +51,6 @@ let selectingEachPlanet = function () {
             
             selectedPlanetName = planets[i].lastElementChild.textContent
 
-            
             //Number of Moons
             if (numberOfMoons) {
                 numberOfMoons.remove()
@@ -72,10 +70,6 @@ let selectingEachPlanet = function () {
             }
             numberOfMoons.textContent = `Number of Moons: ${planetsMoons}`
             planetInfoSection.appendChild(numberOfMoons)
-            
-            
-
-            
 
         })
     }
