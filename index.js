@@ -52,6 +52,7 @@ let selectingEachPlanet = function () {
             
             selectedPlanetName = planets[i].lastElementChild.textContent
 
+            
             //Number of Moons
             if (numberOfMoons) {
                 numberOfMoons.remove()
