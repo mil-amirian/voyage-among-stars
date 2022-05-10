@@ -100,8 +100,6 @@ beginButton.addEventListener('click', startApp)
 menuIcon.addEventListener('click', activateMobileMenu)
 closeButton.addEventListener('click', closeMobileMenu)
 
-
-
 // FUNCTIONS
 
 //App start
@@ -114,7 +112,6 @@ function startApp(e) {
     }
 
 }
-
 
 //To recieve all solar system data from API
 function getPlanetDataFromApi() {
@@ -180,14 +177,7 @@ function closeMobileMenu(e) {
 
 // EXECUTE FUNCTIONS
 
-
-
-
-
-
-
-
-
+//DATA SOURCES FOR PLANET DISTANCES AND VEHICLES
 
 const planetData = [
     { "To": "Sun", "au_min": 0.83, "au_max": 1.17, "au_avg": 1, "km_min": 124166232.93, "km_max": 175029509.07, "km_avg": 149597871, "mls_min": 77153319.81, "mls_max": 108758294.19, "mls_avg": 92955807 },
