@@ -55,7 +55,7 @@ let selectingEachPlanet = function () {
                 if (planetList[i].moons) {
                     planetsMoons.PlanetName = planetList[i].englishName
                     planetsMoons.Moons = planetList[i].moons
-                    console.log(planetList[i].moons).length
+                    console.log(planetList[i].moons)
                 } else {
                     planetsMoons = 0
                 }
