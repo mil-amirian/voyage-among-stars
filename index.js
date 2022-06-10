@@ -29,12 +29,13 @@ let selectingEachPlanet = function () {
             planetName.classList.add('planet-name-info')
             planetName.textContent = `Name: ${getPlanetName}`
             planetInfoSection.appendChild(planetName)
-
-            // Render planet image
+            
+            // Checking if planetImage exists
             if (planetImage) {
                 planetImage.remove()
             }
 
+            // Render planet image
             planetImage = document.createElement('img')
             planetImage.classList.add('planet-img')
             planetImage.src = `images/planet-images/${getPlanetName}.png`
@@ -54,12 +55,15 @@ let selectingEachPlanet = function () {
             for (let i = 0; i < planetList.length; i++) {
                 if (planetList[i].moons) {
                     planetsMoons.PlanetName = planetList[i].englishName
-                    planetsMoons.Moons = planetList[i].moons
-                    console.log(planetList[i].moons)
+                    planetsMoons.Moons = planetList[i].moons.length
                 } else {
-                    planetsMoons = 0
+                    planetsMoons.PlanetName = planetList[i].englishName
+                    planetsMoons.Moons = 0
                 }
+                // console.log(planetsMoons)
+
             }
+            console.log(planetsMoons)
             numberOfMoons.textContent = `Number of Moons: ${planetsMoons}`
             planetInfoSection.appendChild(numberOfMoons)
 
