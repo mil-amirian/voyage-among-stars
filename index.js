@@ -114,10 +114,7 @@ function startApp(e) {
     e.preventDefault()
     if (!solarSystemBodies.length) {
         getPlanetDataFromApi()
-    } else {
-        console.log(planetList)
-    }
-
+    } 
 }
 
 //To recieve all solar system data from API
