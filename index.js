@@ -1,3 +1,5 @@
+//Continue at line 71
+
 // SELECTORS
 const homeBanner = document.getElementById('home-banner')
 const beginButton = document.querySelector('.bgn-btn')
@@ -51,22 +53,31 @@ let selectingEachPlanet = function () {
 
             numberOfMoons = document.createElement('div')
             numberOfMoons.classList.add("number-of-moons")
-            let planetsMoons = {}
+            let planetsMoons;
             for (let i = 0; i < planetList.length; i++) {
-                if (planetList[i].moons) {
-                    planetsMoons.PlanetName = planetList[i].englishName
-                    planetsMoons.Moons = planetList[i].moons.length
-                } else {
-                    planetsMoons.PlanetName = planetList[i].englishName
-                    planetsMoons.Moons = 0
+                if (planetList[i].englishName === getPlanetName) {
+                    if (planetList[i].moons) {
+                        planetsMoons = planetList[i].moons.length
+                        numberOfMoons.textContent = `Number of Moons: ${planetsMoons}`
+                    } else {
+                        planetsMoons = 'No Moons'
+                        numberOfMoons.textContent = `Number of Moons: ${planetsMoons}`
+                    }
                 }
-                // console.log(planetsMoons)
-
             }
-            console.log(planetsMoons)
-            numberOfMoons.textContent = `Number of Moons: ${planetsMoons}`
             planetInfoSection.appendChild(numberOfMoons)
 
+
+            //Add additional Planet information from the planetList array
+
+
+
+
+
+
+
+
+            
         })
     }
 }
