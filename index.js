@@ -66,11 +66,12 @@ let selectingEachPlanet = function () {
                 }
             }
             planetInfoSection.appendChild(numberOfMoons)
+            console.long(planetInfoSection)
 
 
             //Add additional Planet information from the planetList array
 
-
+            
 
 
 
