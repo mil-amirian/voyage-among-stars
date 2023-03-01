@@ -16,7 +16,6 @@ const planetImgSection = document.querySelector('.planet-img-info-panel')
 let selectingEachPlanet = function () {
     let getPlanetName, planetNameLine, discoveredBy, discoveredDate, gravity, meanRadius, planetName, planetImage, selectedPlanetName, numberOfMoons
     
-
     for (let i = 0; i < planets.length; i++) {
         planets[i].addEventListener('click', () => {
             
@@ -66,7 +65,6 @@ let selectingEachPlanet = function () {
                 }
             }
             planetInfoSection.appendChild(numberOfMoons)
-            console.long(planetInfoSection)
 
 
             //Add additional Planet information from the planetList array
