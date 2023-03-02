@@ -472,7 +472,6 @@ ul {
 @media only screen and (max-width: 380px) {
     .planet-img-container {
         height: 30vh;
-        width: 100%;
     }
 
     .ind-planet {
