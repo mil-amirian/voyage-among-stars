@@ -48,6 +48,7 @@ let selectingEachPlanet = function () {
             //Number of Moons
             if (numberOfMoons) {
                 numberOfMoons.remove()
+                console.log("moons removed")
             }
 
             numberOfMoons = document.createElement('div')
