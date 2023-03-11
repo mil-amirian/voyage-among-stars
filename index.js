@@ -69,7 +69,7 @@ let selectingEachPlanet = function () {
 
             //Add additional Planet information from the planetList array
 
-            
+            //start by Discovered By:
 
 
 
